@@ -1,6 +1,5 @@
 package chinusoid.greenhouse;
 
-/** Shared console formatting and validation for the simulated irrigation systems. */
 final class IrrigationOutput {
     private IrrigationOutput() {
     }

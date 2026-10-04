@@ -1,12 +1,11 @@
 package chinusoid.greenhouse;
 
-/** Client: chooses each combination and changes an implementation at runtime. */
 public final class Main {
     private Main() {
     }
 
     public static void main(String[] args) {
-        System.out.println("Greenhouse watering - Bridge pattern");
+        System.out.println("Greenhouse watering");
         System.out.println();
 
         demonstrate("Regular program + drip system",
@@ -18,7 +17,7 @@ public final class Main {
         demonstrate("Intensive program + sprinkler system",
                 new IntensiveWatering(new SprinklerIrrigation()));
 
-        System.out.println("Switching the system on the SAME watering program:");
+        System.out.println("Switching irrigation system:");
         WateringProgram program = new RegularWatering(new DripIrrigation());
         program.run();
         program.setIrrigationSystem(new SprinklerIrrigation());

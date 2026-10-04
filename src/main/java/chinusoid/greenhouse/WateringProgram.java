@@ -2,7 +2,6 @@ package chinusoid.greenhouse;
 
 import java.util.Objects;
 
-/** Abstraction: a watering program connected to a replaceable irrigation system. */
 public abstract class WateringProgram {
     private IrrigationSystem irrigationSystem;
 
