@@ -4,7 +4,6 @@ import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 import java.nio.charset.StandardCharsets;
 
-/** Dependency-free checks. Run this class directly; assertions are always enabled here. */
 public final class BridgeVerification {
     private BridgeVerification() {
     }
@@ -15,7 +14,7 @@ public final class BridgeVerification {
         verifyRuntimeSwitch();
         verifyNullSystemsAreRejected();
         verifyInvalidDurationsAreRejected();
-        System.out.println("All 5 Bridge verification groups passed.");
+        System.out.println("All checks passed.");
     }
 
     private static void verifyProgramDurations() {
@@ -108,7 +107,6 @@ public final class BridgeVerification {
         }
     }
 
-    /** A new Implementor can be used without changing either watering program. */
     private static final class RecordingIrrigationSystem implements IrrigationSystem {
         private int lastDuration;
         private int calls;
